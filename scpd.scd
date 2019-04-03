@@ -2,7 +2,7 @@
 // OSC con PureData
 // ==================================
 
-// recibir
+// recibir datos
 OSCdef(\frecuencia, {|msg| a.set(\frec, msg[1])}, '/frec').fix;
 OSCdef(\amplitud, {|msg| a.set(\amp, msg[1])}, '/amp').fix;
 
