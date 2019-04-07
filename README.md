@@ -1,2 +1,2 @@
 # red-sc-pd
-Red de conexión SC PD
+Red de conexión entre SuperCollider y Pure Data
