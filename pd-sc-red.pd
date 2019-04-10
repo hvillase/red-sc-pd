@@ -1,0 +1,45 @@
+#N canvas 0 106 1860 882 10;
+#X floatatom 363 115 5 200 1000 0 - - -;
+#X obj 363 174 list prepend send;
+#X obj 363 203 list trim;
+#X obj 411 281 netsend -u -b;
+#X obj 411 314 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 411 230 connect localhost 57120;
+#X msg 490 252 disconnect;
+#X obj 84 165 netreceive -u -b;
+#X msg 84 138 listen 3000;
+#X obj 84 194 oscparse;
+#X obj 84 228 list trim;
+#X floatatom 84 312 5 0 0 0 - - -;
+#X floatatom 124 290 5 0 0 0 - - -;
+#X obj 363 144 oscformat /frec;
+#X floatatom 472 121 5 0 1 0 - - -;
+#X obj 472 146 oscformat /amp;
+#X obj 84 261 route frec amp;
+#X text 161 289 <-conectar a amp del instrumento;
+#X text 120 312 <- conectar a frec del instrumento;
+#X text 469 97 amplitud;
+#X text 357 93 frecuencia;
+#X text 82 109 Recibe valores de SuperCollider;
+#X text 361 73 Envía valores a SuperCollider;
+#X text 175 260 <- sustituir chat por frec y amp;
+#X text 508 120 <- conectar formas de control para frecuencia y amplitud
+;
+#X text 565 225 <- sustituir localhost por IP de SC. Probar IP con
+y sin "comillas".;
+#X connect 0 0 13 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 5 0 3 0;
+#X connect 6 0 3 0;
+#X connect 7 0 9 0;
+#X connect 8 0 7 0;
+#X connect 9 0 10 0;
+#X connect 10 0 16 0;
+#X connect 13 0 1 0;
+#X connect 14 0 15 0;
+#X connect 15 0 1 0;
+#X connect 16 0 11 0;
+#X connect 16 1 12 0;
