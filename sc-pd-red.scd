@@ -30,4 +30,6 @@ SynthDef(\red, {|frec = 400, amp = 0, gate = 1|
 }).add
 );
 
-a = Synth(\red)
+a = Synth(\red); // activar synth
+a.set(\amp, 0.4); // dar volumen manualmente
+a.set(\gate, 0); // apagar
