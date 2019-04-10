@@ -9,7 +9,7 @@ $ ifconfig
 $ ipconfig
 
 ## SuperCollider 
-Código para enviar y recibir datos en red local. SynthDef.
+Código para enviar y recibir datos en red local. SynthDef. Nombre del archivo: sc-pd-red.scd
 
 ## Pure Data
-Patch para enviar y recibir datos en red local.
+Patch para enviar y recibir datos en red local. Nombre del patch pd-sc-red.pd
